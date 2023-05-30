@@ -38,7 +38,7 @@ public class HttpUtils {
 
     public static URI resolveWebWeaverURI(URI base, URI target) {
         if (base != null && !target.isAbsolute()) target = base.resolve(target);
-        if (target.getPath() != null && target.getPath().endsWith("9.php"))
+        if (target.getPath() != null && target.getPath().endsWith("/9.php"))
             target = target.resolve(target.getRawFragment());
 
         return target;
